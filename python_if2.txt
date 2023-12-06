@@ -1,0 +1,14 @@
+#  Get number inputs.
+a = input("Input first number:")
+b = input("Input second number:")  
+c = input("Input third number:")
+
+
+if a == b and a == c:  # if all numbers are eqaul, it's neither increasing nor decreasing.
+    print("Neither increasing or decreasing order")
+elif c >= b and b >= a:  # if c >= b <= a and they aren't all equal, ii's increasing.
+    print("Increasing order")
+elif a >= b and b >= c:  # if a>= b >= c and they aren't all equal, it's decreaing.
+    print("Decreasing order")
+else:  # otherwise it's neither increasing nor decreaing.
+    print("Neither increasing or decreasing order")

@@ -1,0 +1,12 @@
+#  Get number inputs.
+a = input("Input first number:")
+b = input("Input second number:")  
+c = input("Input third number:")
+
+
+if a == b and a == c:  # b and c equal a, so b and c are equal too.
+    print("All numbers are equal.")
+elif a == b or b == c or b == c:  #  if the number didn't meet the first if statement, it checks if they have any equal numbers.
+    print("Neither all are equal or different.")
+else:
+    print("All numbers are different.")  # if there weren't any equal numbers, all numbers are different.
