@@ -1,0 +1,5 @@
+i = 1  # set the counter variable.
+
+while i <= 10:
+    print(f'6 x {i} = {6 * i}')  # use f string to make formating easier.
+    i += 1  # add 1 to the counter variable

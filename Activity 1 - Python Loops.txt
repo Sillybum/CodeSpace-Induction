@@ -1,0 +1,11 @@
+num1 = 0 # Set the first number of fibonacci number.
+num2 = 1 # Set the second too because it doesn't have two numbers before it.
+i = 0 # set the counter variable.
+print(num1) #print the first and second number.
+print(num2)
+while i <= 49:  # print rest 49 numbers.
+	print(num1 + num2)  # print the sum of previous two numbers.
+	num2 += num1  #the number that was just printed becomes a num2.
+	num1 = num2 - num1  #num2 becomes num1.
+	i += 1  # increase the counter variable by 1.
+	
