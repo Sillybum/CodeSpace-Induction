@@ -1,0 +1,4 @@
+sample_list = [25, 14, 56, 15, 36, 56, 77, 18, 29, 49]  #initialise a list.
+print(f'Original List: {sample_list}')
+print(f'Maximum value for the above list = {max(sample_list)}')  # print out the maximum number
+print(f'Minimum value for the above list = {min(sample_list)}')  # print the minimum number
