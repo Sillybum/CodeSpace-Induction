@@ -1,0 +1,10 @@
+def is_prime(n): #make a function to check if a number is prime or not
+  i = 2 # it starts from 2 because 1 divides every whole number without remainder
+  while i <= n / 2: #use while loop to make sure the function checks every case.
+    if n % i == 0: #if the number is divisible by i, then it is not prime
+    if n % i == 0:
+      return False
+    i += 1
+  return True
+
+print(is_prime(11))
