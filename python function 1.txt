@@ -1,0 +1,10 @@
+sample_list = [10, 2, 3, 4, 7]
+
+def show_content(list):  # This function uses f-string and shows the list
+    print(f'The content of the list is: {list}')
+
+def show_max(list):  # This function uses f-string and max mathod.
+    print(f'The max value in the list: {max(list)}')
+
+show_content(sample_list)  # Run the functions
+show_max(sample_list)

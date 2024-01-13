@@ -1,0 +1,12 @@
+def factorial(num):  # initialise a function
+    if num == 0:  #if input is 0, it prints 1 which is factorial 0.
+        print(1)
+    elif num > 0:  #if the input is bigger than 0
+        result = 1  # initialise the result value
+        n = 1  # n is the counter value
+        while n <= num:
+            result *= n  # everytime it loops, result gets muliplied by n
+            n += 1
+        print(result)
+
+factorial(6)
