@@ -6,17 +6,21 @@
     </head> 
     <body>
         <p>Input radius value and get the volume of a sphere.</p>
+        <!-- This input box is for getting the input of radius of a sphere -->
         <label for="radius">Radius<br></label>
         <input id="radius"><br>
+        <!-- This input box is for output the result of the calculation -->
         <label for="volume">Volume<br></label>
         <input id="volume">
 
         <div>
+        <!-- The button triggers a method on clicking it -->
         <button onclick="calVolume()">Calculate</button>
         </div>
 
 
         <script>
+            <!-- this function calculates the volume of a sphere according to the user input -->
             function calVolume() {
                 var radius_input = document.getElementById('radius').value;
             var volume_output = 4 / 3 * 3.14 * radius_input * radius_input * radius_input;

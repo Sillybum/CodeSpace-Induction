@@ -7,12 +7,13 @@
     <body>
         <p id="text">Vanilla JS DOM</p> 
         <div>
-        <button id="jsstyle"
-        onclick="js_style()">Style</button>
+        <!-- The button doesn't need a id property so I deleted -->
+        <button onclick="js_style()">Style</button>
         </div>
 
 
-        <script>
+        <script> 
+            <!-- This function finds the nodes by id tracking method and changes the color and the fontsize of the text inside. -->
             function js_style() {
                 document.getElementById("text").style.fontSize='100px';
                 document.getElementById("text").style.color='red';
