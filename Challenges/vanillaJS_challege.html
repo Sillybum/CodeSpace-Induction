@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+  </body>
+  <script>
+    document.getElementById('rock').addEventListener('click', function() {
+play("rock")
+});
+document.getElementById('paper').addEventListener('click', function() {
+play("paper")
+});
+document.getElementById('scissors').addEventListener('click', function() {
+play("scissors")
+});
+    function play(player) {
+      var headings = document.getElementsByTagName('h2');
+      for (let i = 0; i < headings.length; i++) {
+        headings[i].textContent = '';
+      }
+      const playerHeading = document.createElement('h2');
+      if (player === "rock") {
+        playerHeading.textContent = "rock";
+        document.body.appendChild(playerHeading);
+      } else if (player === "paper") {
+        playerHeading.textContent = "paper";
+        document.body.appendChild(playerHeading);
+      } else {
+        playerHeading.textContent = "scissors";
+        document.body.appendChild(playerHeading);
+      }
+      const computer = computersChoice();
+      const computerHeading = document.createElement('h2');
+      if (computer === "rock") {
+        computerHeading.textContent = "rock";
+        document.body.appendChild(computerHeading);
+      } else if (computer === "paper") {
+        computerHeading.textContent = "paper";
+        document.body.appendChild(computerHeading);
+      } else {
+        computerHeading.textContent = "scissors";
+        document.body.appendChild(computerHeading);
+      }
+      const result = getWinner(player, computer);
+    }
+    function computersChoice() {
+      const choices = ['rock', 'paper', 'scissors'];
+      var item = choices[Math.floor(Math.random() * choices.length)]
+      return item;
+    }
+    function getWinner(player, computer) {
+      if (player === computer) {
+        const resultHeading = document.createElement('h2');
+        resultHeading.textContent = "Result: Tie!";
+        document.body.appendChild(resultHeading);
+        } else if ((player === "rock" && computer === "scissors") || (player === "paper" && computer === "rock") || (player === "scissors" && computer === "paper")) {
+         const resultHeading = document.createElement('h2');
+        resultHeading.textContent = "Result: You win!";
+        document.body.appendChild(resultHeading);
+        }  else {
+       const resultHeading = document.createElement('h2');
+        resultHeading.textContent = "Result: You lose!";
+        document.body.appendChild(resultHeading);
+        }
+      }
+  </script>
+</html>
